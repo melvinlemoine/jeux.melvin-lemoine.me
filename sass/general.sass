@@ -1,12 +1,26 @@
 *
     box-sizing: border-box
 
-.container
-    position: relative
-    display: block
-    width: 100%
-    max-width: 1200px
-    margin-left: auto
-    margin-right: auto
-    padding-left: 25px
-    padding-right: 25px
+.body
+    background-image: url('../images/space.webp')
+    color: white
+    font-family: Poppins
+
+    .main
+        min-height: calc(100vh - 10rem)
+
+    .section
+        margin-bottom: 10rem
+        &:last-child
+            margin-bottom: 0
+        &__title
+            font-size: 1.5rem
+            font-weight: bold
+            // color: #707070
+            margin-bottom: 3rem
+
+            @media screen and (min-width: 1200px)
+                font-size: 3rem
+
+            &.nomb
+                margin-bottom: 0
