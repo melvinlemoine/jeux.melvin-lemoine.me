@@ -2,13 +2,14 @@
   "name": "integration-starter-template",
   "version": "1.0.0",
   "scripts": {
-    "deploy": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss && npm compress images",
+    "deploy": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss && npm run assets",
     "build-autoprefix": "postcss --use autoprefixer --map false --output dist/css/styles.css dist/css/styles.css",
     "build-cleancss": "cleancss -o dist/css/styles.css dist/css/styles.css",
     "build-clean": "rimraf css",
-    "compress-images": "rimraf dist/images/* && sharp resize 1920 -q 75 -f webp -i src/images/* -o dist/images",
+    "compress-images": "sharp resize 1920 -q 85 -f webp -i src/images/* -o dist/images",
     "build-sass": "node-sass --output-style expanded --source-map true sass/styles.sass dist/css/styles.css",
-    "watch": "npm run build-sass -- --watch"
+    "watch": "npm run build-sass -- --watch",
+    "assets": "rimraf dist && mkdir dist && mkdir dist/images && mkdir dist/css && npm run compress-images && copy 'src/fonts/*' dist/fonts && copy 'src/js' dist/js && npm run deploy"
   },
   "author": "https://github.com/melvinlemoine",
   "devDependencies": {
@@ -18,10 +19,8 @@
     "postcss-cli": "^6.1.3",
     "rimraf": "^2.7.1",
     "imagemin-cli": "^7.0.0",
-    "imagemin-webp": "^6.0.0"
-  },
-  "description": "",
-  "dependencies": {
+    "imagemin-webp": "^6.0.0",
     "sharp-cli": "^1.15.0"
-  }
+  },
+  "description": ""
 }
