@@ -1,0 +1,33 @@
+.games
+
+    &__list
+        &_game
+            border: .5rem solid $red
+            background-color: $blue
+
+            @media screen and (min-width: 768px) and (max-width: 1200px)
+                width: calc(100% / 2 - 2%)
+                margin-right: calc((2% * 2) / 1)
+
+                &:nth-child(2n+0)
+                    margin-right: 0
+
+            @media screen and (min-width: 1200px)
+                width: calc(100% / 3 - 2%)
+                margin-right: calc((2% * 3) / 2)
+
+                &:nth-child(3n+0)
+                    margin-right: 0
+                    
+            &_illustration
+                background-color: $light
+                height: 10rem
+                &_img
+                    width: auto
+                    height: auto
+                    max-width: 80%
+                    max-height: 80%
+            &_content
+                color: white
+                &_title
+                &_description
