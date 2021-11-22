@@ -2,14 +2,14 @@
   "name": "integration-starter-template",
   "version": "1.0.0",
   "scripts": {
-    "deploy": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss && npm run assets",
+    "deploy": "npm run assets && npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
     "build-autoprefix": "postcss --use autoprefixer --map false --output dist/css/styles.css dist/css/styles.css",
     "build-cleancss": "cleancss -o dist/css/styles.css dist/css/styles.css",
     "build-clean": "rimraf css",
     "compress-images": "sharp resize 1920 -q 85 -f webp -i src/images/* -o dist/images",
     "build-sass": "node-sass --output-style expanded --source-map true sass/styles.sass dist/css/styles.css",
     "watch": "npm run build-sass -- --watch",
-    "assets": "rimraf dist && mkdir dist && mkdir dist/images && mkdir dist/css && npm run compress-images && copy 'src/fonts/*' dist/fonts && copy 'src/js' dist/js && npm run deploy"
+    "assets": "rimraf dist && copyfiles -f src/fonts/* dist/fonts && copyfiles -f src/js/* dist/js && copyfiles -f src/css/* dist/css && copyfiles -f src/images/* dist/images"
   },
   "author": "https://github.com/melvinlemoine",
   "devDependencies": {
@@ -22,5 +22,8 @@
     "imagemin-webp": "^6.0.0",
     "sharp-cli": "^1.15.0"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "copyfiles": "^2.4.1"
+  }
 }
