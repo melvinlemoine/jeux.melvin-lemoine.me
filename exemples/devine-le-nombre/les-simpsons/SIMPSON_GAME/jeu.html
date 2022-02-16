@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Les Simpsons</title>
+
+    <style></style>
+    <link rel="shortcut icon" type="image/jpg" href="./favicon/kisspng-donuts-coffee-and-doughnuts-gelatin-dessert-frosti-simpsons-5abea565ca27f4.0548396215224436218281.png" />
+    <!-- styles -->
+    <!-- styles -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body >
+
+    <header class="bg_header">
+
+        <div>
+            <img src="./images/logo.png" alt="les simpsons - game">
+        </div>
+        <figure>
+            <audio
+                controls
+                src="./media/intro-style-simpson-for-me-by-me-desc.mp3">
+                    Your browser does not support the
+                    <code>audio</code> element.
+            </audio>
+        </figure>
+
+    </header>
+
+    <main >
+
+
+        <!-- Introduction -->
+
+        <section>
+
+
+            <div id="settingsbox" class="settingsplaybox">
+
+                <h2 class="title">Définissez les valeurs</h2>
+
+                <div>
+                    <label for="" class="text-basic">Nombre de donuts minimum :</label>
+                    <input type="text" id="min" class="valeurs" placeholder="minimum" value="1">
+                </div>
+                <div>
+                    <label for="" class="text-basic">Nombre de donuts maximum :</label>
+                    <input type="text" id="max" class="valeurs" placeholder="maximum" value="100">
+                </div>
+
+                <h2 class="title">Nombre de vies</h2>
+                <div class="settings">
+                    <input id="settings__attempts" class="input valeurs" type="number" placeholder="Nombre" value="10">
+                </div>
+
+                <div class="settings__controls w-full mt-3-xs">
+                    <button class="button is-success is-bordered btn-1" onclick="settings(), launchSound()">Lancer le jeu</button>
+                </div>
+
+
+
+        </section>
+        </section>
+        <br><br>
+        <!-- Jeu -->
+        <div id="playbox" class="playbox">
+        
+            <h2 class="title">C'est parti !</h2>
+        
+
+            <section>
+                <div>
+                    <label for="essayer" class="text-basic">Combien Homer a-t-il de donuts ?</label>
+                </div>
+                <input type="text" id="player-input" class="guessField valeurs">
+                <input type="submit" value="Vérifier" onclick="verification()" id="envoyer" class="btn-1">
+                <p id="plusoumoins" class="text-basic" hidden>Info</p>
+
+            </section>
+
+        </div>
+   
+
+    </main>
+
+    <br><br><br><br><br>
+
+    <footer class="bg_footer text-footer">
+        <p>© Sarah DIOP | Mentions Légales </p>
+    </footer>
+
+</body>
+
+<script src="jeu.js"></script>
+
+<script>
+    const player_input = document.getElementById("player-input");
+
+    player_input.addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+
+            if (parseInt(document.getElementById("player-input").value)) {
+                verification();
+            }
+        }
+    });
+</script>
+
+</html>

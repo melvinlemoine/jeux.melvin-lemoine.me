@@ -1,0 +1,282 @@
+/* === ABSTRACTS === */
+
+/* boites */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* clearfix */
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+/* images */
+img {
+    display: block;
+}
+
+
+/* ======================================================== */
+
+/* === VARIABLES === */
+
+/* === GRILLE === */
+
+/* === TEXTES & POLICES === */
+
+/* texte caché */
+.hdn_text {
+    font-size: 0;
+    margin: 0;
+}
+
+/* suppression des marges des paragraphes et des titres */
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* === NAVIGATIONS === */
+
+/* suppression des éléments de listes */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* === BOUTONS & CALL TO ACTION === */
+.btn {
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+/* btn 1 */
+.btn-1,
+.btn-1:visited {
+    padding: 10px;
+    height: 40px;
+    width: 150px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+
+    transition: all .5s;
+}
+
+.btn-1:hover,
+.btn-1:focus,
+.btn-1:active {
+    opacity: .75;
+}
+
+.custom-input {
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+}
+
+.custom-input-1 {
+    border: none;
+    outline: none;
+    text-align: center;
+    height: 40px;
+    width: 150px;
+    padding: 10px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+
+    font-size: 0.9rem;
+}
+
+/* enlève incrémentation et décrementation pour l'utilisateur */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+/* === COMPOSANTS ( formulaires, produits ) === */
+
+/* === DIVERS === */
+
+.d_none {
+    display: none;
+}
+
+/* ======================================================= */
+
+/* === BODY === */
+body {
+    background: url(../images/bg-spider.jpg) no-repeat fixed top/cover;
+}
+
+/* === HEADER === */
+.title {
+    background-color: rgba(24, 30, 75, 0.808);
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    width: 1000px;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+/* === MAIN === */
+.page-parametre {
+    background-color: rgba(240, 51, 51, 0.459);
+    border-radius: 20px;
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Titre, texte, ... */
+.title-1 {
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+.text-1 {
+    color: #fff;
+    padding-bottom: 50px;
+}
+
+.subtitle-1 {
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.intervalle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.tentatives {
+    margin-bottom: 30px;
+}
+
+.page-jeu {
+    background-color: rgba(240, 51, 51, 0.459);
+    border-radius: 20px;
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.intervalle-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+.valeur {
+    background-color: #fff;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-left: auto;
+}
+
+.donnees {
+    width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.text-2 {
+    background-color:rgba(255, 255, 255, 0.836);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+
+.intervalle-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body .page-victoire {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../images/victoire.gif);
+    background-size: cover;
+    justify-content: center;
+}
+
+.page-victoire-content {
+    background-color: rgba(24, 30, 75, 0.911);
+    border-radius: 20px;
+    width: 600px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+body .page-defaite {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../images/defaite.gif);
+    background-size: cover;
+    justify-content: center;
+}
+
+.page-defaite-content {
+    background-color: rgba(24, 30, 75, 0.911);
+    border-radius: 20px;
+    width: 600px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.title-2 {
+    padding-bottom: 20px;
+    color: #fff;
+}
+/* === FOOTER === */
+
+/* === MISE EN PAGE DIVERS === */
+
+/* ====================================================== */

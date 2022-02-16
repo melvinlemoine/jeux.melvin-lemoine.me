@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Game Clochettes</title>
+
+    <link rel="shortcut icon" type="image/jpg" href="images/logo_leaf.svg" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Google fonts -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Responsive grille -->
+    <link rel="stylesheet" href="./css/grid.css">
+
+    <!-- Google fonts -->
+    <!-- Mochiy Pop -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+
+    <!-- Cheri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <main >
+
+        <div class="bg-title container">
+        <h1 class="header-title">💰 Devine le nombre de clochettes ! 💰</h1>
+        </div>
+
+        <!-- Introduction -->
+
+        <div class="container">
+            
+            <section class="section-1" id="sect-1">
+
+                <h2 class="subtitle">Paramètres du jeu : </h2>
+
+                <h3>Plage de valeurs</h3>
+                
+                <input type="number" id="nbmin" class="input-1" placeholder="minimum" value="1">
+
+                <input type="number" id="nbmax" class="input-1" placeholder="maximum" value="100">
+
+                <h3>Nombre de tentatives</h3>
+
+                <input type="number" id="nbtenta" class="input-1" placeholder="tentative" value="10">
+
+                <p id="error"></p>
+
+                <input type="submit" class="input-2" value="Lancement du jeu" onclick="Launch()"  id="launch">
+                
+            </section>
+
+        </div>
+
+        <!-- Jeu -->
+
+        <div class="container">
+
+            <section class="section-2" id="sect-2">
+        
+                <h2 class="subtitle">À toi de jouer !</h2>
+
+                <h3>Entre un nombre :</h3>
+
+                <input type="text" id="try" class="input-1">
+
+                <br>
+                <p id="infos"></p>
+                <p id="infos2"></p>
+
+                <input type="submit" class="input-2" value="Vérifier" onclick="Verify()" id="verify">
+
+                <img src="images/piège.png" alt="piege" class="piege" onclick="Piege()" id="piege">
+
+
+            </section>
+        
+        </div>
+
+        <!-- Fin - gagné ! -->
+
+        <div class="container">
+
+            <section class="section-3" id="sect-3">
+                
+                <h2 class="subtitle">Félicitation !</h2>
+                <p> Tu as trouvé le nombre exacte de clochettes que possède ce fameux Tom Nook !</p>
+
+                <input type="submit" class="input-2" value="Rejoue !" onclick="Reload()" id="refresh">
+
+            </section>
+        
+        </div>
+
+        <!-- Fin - perdu !-->
+
+        <div class="container">
+
+            <section class="section-4" id="sect-4">
+                
+                <h2 class="subtitle">Perdu !</h2>
+                <p> Tu n'as pas trouvé le nombre exacte de clochettes que possède ce fameux Tom Nook, retente ta chance !</p>
+
+                <input type="submit" class="input-2" value="Rejoue !" onclick="Reload()" id="refresh">
+
+            </section>
+        
+        </div>
+
+        <!-- Bonus -->
+
+        <div class="container">
+
+            <!-- Audio  -->
+            <audio controls="" class="audio">
+                <source src="media/animal-crossing-trap-remix-synthion-able-sisters.mp3" type="audio/mp3">
+            </audio>
+
+        </div>
+
+        <div class="container">
+
+            <section class="section-5" id="sect-5">
+                
+                <h2 class="subtitle">HAHAHA</h2>
+                <p>Tu n'es pas malin, tu es tombé dans mon piège !</p>
+    
+                <input type="submit" class="input-2" value="Ressort par ici !" onclick="Reload()" id="refresh">
+    
+            </section>
+        
+        </div>
+
+    </main>
+
+    <footer>
+        <p class="footer_subtitle">© Marguerite Veillé | Mentions Légales </p>
+    </footer>
+
+</body>
+
+<script src="jeu.js"></script>
+
+</html>

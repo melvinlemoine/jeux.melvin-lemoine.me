@@ -1,0 +1,131 @@
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="description" content="Ici le texte de description de la page pour le référencement...">
+<meta name="keywords" content="mots clés, mots-clé, etc..." >
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<!-- meta indispensable pour le bon fonctionnement des mediaqueries -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>SQUID NOMBRE</title>
+
+<!-- favicone  -->
+<link rel="shortcut icon" href="./favicon/squid.png">
+
+<!-- styles -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/responsive-grid.css">
+<!-- Google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Offside&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+
+   
+    <header>
+
+        <div class="container container-logo">
+         <img class="logo" src="./images/logo_squid.svg" alt="SquidNumber">
+         <h3 class="devinez-title">숫자를 추측</h3>
+        </div>
+
+    </header>
+
+
+    <main>
+        
+            <div id="start" class="container row between main-content">
+                <p id="error-message"></p>
+                <div id="setting-game">
+                    <input type="number" id="minimal" class="input" placeholder="nombre minimal">
+                    <input type="number" id="maximal" class="input"  placeholder="nombre maximal">
+                    <input type="number" id="essai" class="input" placeholder="nombre d'essai">
+                    <button id="valide" onclick="generer()"  disabled class="button">Lancer le jeu</button>
+                </div>
+            </div>
+
+            <div id="suite" >
+                <section class="container row between">
+
+                    <article>
+                        <h3>Minimum</h3>
+                        <p id="x1">x</p>
+                    </article>
+
+                    <article>
+                        <h3>Maximum</h3>
+                        <p id="x2">x</p>
+                    </article>
+
+                    <article>
+                        <h3>Tentatives restantes</h3>
+                        <p id="x3">x</p>
+                    </article>
+
+                </section>
+
+                <div class="container regle">
+                    <p>Pour jouer un nombre, entrez le dans le champ ci-dessous et appuyez sur la touche "Entrée"</p>
+                </div>
+
+                <p id='indice'></p>
+
+                <div class="enter">
+                    <input type="number" class="input2" id="choisi" placeholder="1">
+                    <button class="button2" onclick="verifier()">
+                        entrer
+                    </button>
+                </div>
+
+            </div>
+
+            <div></div>
+
+
+        <div class="container container-logo2"></div>
+
+
+    </main>
+
+
+    <div id="perdu" class="defaite">
+
+        <h1>Vous avez perdu</h1>
+        <button class="btn_relancer" onclick="relance1()">Relancez le jeu</button>
+
+    </div>
+
+    <div id="victoire" class="gagne">
+
+        <h1>Vous avez gagné</h1>
+        <button class="btn_relancer" onclick="relance2()">Relancez le jeu</button>
+        
+    </div>
+
+
+    
+    <script src="squid.js"></script>
+</body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+

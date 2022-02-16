@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+
+    <title> LES SIMS - DEVINE LE NOMBRE DE SIMFLOUZ </title>
+
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/jpg" href="images/sims_logo.png" />
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+
+<body>
+
+
+    <main>
+
+        <section id="partie1" class="edit1">
+
+        
+
+        <h2 class="edit_font"> Avant de jouer, définis les valeurs ! </h2>
+        <!-- Plage de valeurs --> 
+        <label for=""> Plage de valeurs : </label>
+        <input type="number" id="min_value" placeholder="Valeur minimum" value="1">
+        <input type="number" id="max_value" placeholder="Valeur maximum" value="100">
+        <br>
+        <br>
+        <label for=""> Tentatives : </label>
+        <input type="number" id="tentatives" placeholder="Nombre de tentatives" value="10">
+
+        <p id="Error"></p>
+       
+
+        <button class="" onclick="guessGame()" id="btn"> Valider </button>
+
+       
+
+       
+        </section>
+
+
+        <section id="partie2" class="edit2">
+
+
+        <!-- Jeu Simflouz-->
+        <h2> 💸 Devine le nombre de Simflouz 💸 </h2> 
+        <input type="text" id="userNumber">
+        <button onclick="Game()"> Vérifier </button>
+        <p id="infos"></p>
+        <p id="infos2"></p>
+        <button onclick="gameSecret()" class="edit_button"> Ne clique pas sur ce bouton </button>
+       
+        </section>
+
+        <!-- Vous avez perdu -->
+
+        <section id="fail" class="edit2">
+
+            <p> Vous avez perdu ! </p>
+            <button onclick="reload()"> Rejouer ! </button>
+
+        </section>
+
+
+        <!-- Vous avez gagné -->
+        <section id="win" class="edit2">
+
+            <p> Vous avez gagné ! </p>
+            <button onclick="reload()"> Gagner encore un max de flouz !</button>
+
+        </section>
+
+
+        <section id="secret" class="edit2">
+
+            <h1> Tu ne m'as pas écouté ! </h1>
+            <p> Tu as été enlevé(e) par un alien, tu es fauché(e) ! 👽 </p>
+            <button onclick="reload()"> Être sauvé(e) par la créatrice du jeu </button>
+        </section>
+
+    </main>
+
+
+
+
+    <footer class="box-footer">
+
+        <p> © Emeline Le Texier | Mentions Légales </p>
+
+    </footer>
+
+
+
+  
+
+
+
+
+
+   <script src="game.js"></script>
+
+</body>

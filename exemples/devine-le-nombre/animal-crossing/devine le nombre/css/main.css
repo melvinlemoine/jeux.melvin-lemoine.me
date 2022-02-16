@@ -1,0 +1,215 @@
+
+/*  === ABSTRACTS === */
+
+/* boites */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* clearfix */
+.clearfix::after {
+    content:'';
+    clear: both;
+    display: table;
+}
+
+/* images liquides */
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ======================================= */
+
+/*  === VARIABLES === */
+
+/*  === GRILLE === */
+
+/*  === TEXTES & POLICES === */
+
+body {
+    min-height: 100vh;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.header-title {
+    color: #FFC800;
+    text-align: center;
+    text-shadow: 0px 4px 2px #512000;
+    font-size: 30px;
+    font-family: 'Cherry Swash', cursive;
+}
+
+.subtitle {
+    color: #014C44;
+}
+
+.footer_subtitle {
+    color: #26A591;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+/*  === NAVIGATIONS === */
+
+/* suppression des elts de listes */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*  === BOUTONS & CALL TO ACTION === */
+
+.input-1 {
+    background-color:#26A591;
+    color: #e3f3f0;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.input-1::placeholder {
+    color: #fff;
+    opacity: 0.57;
+    font-size: 13px;
+    text-align: center;
+}
+
+.input-2 {
+    color: #e3f3f0;
+    background-color:#014C44;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow:  2px 4px 8px #000;
+}
+
+.input-2:hover {
+    background-color:#01413a;
+}
+
+/*  === COMPOSANTS (formulaires, produits) === */
+
+
+.audio {
+    position: absolute;
+    bottom: 50px;
+    margin-left: 50px;
+}
+
+.piege {
+    height: 80px;
+    width: 80px;
+}
+
+.btn-piege {
+    cursor: pointer;
+}
+
+/*  === DIVERS === */
+
+/* ======================================= */
+
+/*  === BODY === */
+
+/*  === HEADER === */
+
+.bg-title {
+    background-color: #B87B3A;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.616);
+    padding: 10px;
+    border-radius: 50px;   
+}
+
+/*  === MAIN === */
+
+main {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding-top: 20px;
+    background-image: url(../images/bg-main.png);
+}
+
+.section-1 {
+    background-color: rgba(197, 233, 226, 0.288);
+    box-shadow: 3px 6px 6px #01413a;
+    border-radius: 40px;
+    padding: 10px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.section-2 {
+    background-color: rgba(197, 233, 226, 0.288);
+    box-shadow: 3px 6px 6px #01413a;
+    border-radius: 40px;
+    padding: 10px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.section-3 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.section-4 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.section-5 {
+    margin-top: 50px;
+    text-align: center;
+
+    background-color: rgba(197, 233, 226, 0.288);
+    box-shadow: 3px 6px 6px #01413a;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+
+#sect-1 {
+    display: block;
+}
+
+#sect-2 {
+    display: none;
+}
+
+#sect-3 {
+    display: none;
+}
+
+#sect-4 {
+    display: none;
+}
+
+#sect-5 {
+    display: none;
+}
+
+/*  === FOOTER === */
+
+footer {
+    background-color: #014C44;
+    height: 110px;
+}
+
+/* ======================================= */
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Trouve la hauteur !</title>
+
+    <!-- icon de l'onglet -->
+    <link rel="shortcut icon" href="">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+    <header>
+
+        <div id="title">
+            <h1 class="title">🕸 Trouve la hauteur à laquelle se situe MJ pour la sauver ! 🕸</h1>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div id="page-parametre" class="page-parametre">
+            <h2 class="title-1">L'histoire... 🕷</h2>
+
+            <p class="text-1">MJ a été capturer par un méchant. Dans la peau de Spiderman, tu dois la sauver en
+                trouvant à quelle hauteur elle se situe pour pouvoir lancer ta toile à l'endroit exact !</p>
+
+            <h3 class="subtitle-1">~ Définis un intervalle de hauteurs ~</h3>
+
+            <div class="intervalle">
+                <input class="custom-input" name="valeurmin" type="number" placeholder="Minimale" value="1">
+                <input class="custom-input" name="valeurmax" type="number" placeholder="Maximale" value="100">
+            </div>
+
+            <h3 class="subtitle-1">~ Définis un nombre de toiles ~</h3>
+
+            <div class="tentatives">
+                <input class="custom-input" name="nbtentatives" type="number" placeholder="Tentatives" value="10">
+            </div>
+
+            <button class="btn btn-1" onclick="lancer()">Lancer le jeu</button>
+            <audio src="assets/audio/sound.mp3" id="audio-1"></audio>
+
+        </div>
+
+        <div id="page-jeu" class="page-jeu" style="display: none">
+
+            <h2 class="title-1">Rappel : 🕷</h2>
+
+            <div class="intervalle-1">
+                <div class="donnees">
+                    <h3 class="subtitle-1">Hauteur ⬇️</h3>
+                    <p id="minimum" class="valeur">1</p>
+                </div>
+
+                <div class="donnees">
+                    <h3 class="subtitle-1">Hauteur ⬆️</h3>
+                    <p id="maximum" class="valeur">100</p>
+                </div>
+
+                <div class="donnees">
+                    <h3 class="subtitle-1">Mes toiles</h3>
+                    <p id="tentatives" class="valeur">10</p>
+                </div>
+            </div>
+
+            <p id="text" class="text-2">Pour jouer un nombre, entrez le dans le champ ci-dessous et appuyez sur la
+                touche "Entrée".
+            </p>
+
+            <div class="intervalle-2">
+                <input class="custom-input-1" id="enter" name="guess" type="number" placeholder="Devine" value="1">
+                <button class="btn btn-1" id="bouton" name="guesssubmit" onclick="verifier()">Vérifier</button>
+                <audio src="assets/audio/bruit-de-toile.mp3" id="audio-2"></audio>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="page-victoire" id="page-victoire" style="display: none;">
+        <div class="page-victoire-content">
+            <h2 class="title-2">Vous avez gagné ! 🥳</h2>
+            <button class="btn btn-1" onclick="relancer()">Relancer le jeu</button>
+            <audio src="assets/audio/music-victoire.mp3" id="audio-victoire"></audio>
+        </div>
+    </div>
+
+    <div class="page-defaite" id="page-defaite" style="display: none;">
+        <div class="page-defaite-content">
+            <h2 class="title-2">Vous avez perdu ! 😭</h2>
+            <button class="btn btn-1" onclick="relancer()">Relancer le jeu</button>
+            <audio src="assets/audio/music-defaite.mp3" id="audio-defaite"></audio>
+        </div>
+    </div>
+</body>
+
+<script src="game.js"></script>
+
+<script>
+</script>
+
+</html>

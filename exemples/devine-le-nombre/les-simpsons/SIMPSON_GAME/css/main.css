@@ -1,0 +1,177 @@
+
+/*  === ABSTRACTS === */
+
+/* boites */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* clearfix */
+.clearfix::after {
+    content:'';
+    clear: both;
+    display: table;
+}
+
+/* ======================================= */
+
+/*  === VARIABLES === */
+
+/*  === GRILLE === */
+
+/*  === TEXTES & POLICES === */
+
+/*  === NAVIGATIONS === */
+
+/* suppression des elts de listes */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*  === BOUTONS & CALL TO ACTION === */
+
+.btn-1 {
+    background-color: ghostwhite;
+    color: #000000;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+    border: solid p1x #000000;
+}
+
+.btn-1:hover {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+    align-items: center;
+
+    
+
+    padding: 5px;
+    text-transform: uppercase;
+    border: solid 2px ghostwhite;
+}
+
+/*  === COMPOSANTS (formulaires, produits) === */
+
+/*  === DIVERS === */
+
+.playbox {
+    display:none;
+}
+
+.result {
+    display: none;
+}
+
+.settings {
+    display: flex;
+}
+
+.all-center, .all-centered, .allcenter, .allcentered, .content-center, .content-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* ======================================= */
+
+/*  === BODY === */
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background: transparent url(../images/background_simpons.jpg) no-repeat left top/cover;
+    justify-content: center;
+    display: block;
+}
+
+/*  === HEADER === */
+
+.bg_header {
+    
+    border-radius: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 400px;
+    margin-left: 400px;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
+/*  === MAIN === */
+
+main {
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+/*  === FOOTER === */
+
+/*  === MISE EN PAGE DIVERS === */
+
+
+figure {
+    margin: auto;
+    text-align: center;
+}
+
+.audio-player {
+    background-color: #000000;
+}
+
+.main_title {
+    color:#000000;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text-footer {
+    padding-top: 200px;
+    padding-right: 50px;
+    color:#000000;
+    text-align: right;
+    text-transform: lowercase;
+}
+
+.title {
+    color: #000000;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.text-basic {
+    color: #000000;
+    font-size: 14px;
+}
+
+.valeurs {
+    background-color: ghostwhite;
+    color:darkslategray;
+    font-size: .75rem;
+    border: solid 2px #000000;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+
+/* ======================================= */
+

@@ -1,0 +1,313 @@
+
+/*  === ABSTRACTS === */
+
+/* boites */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* clearfix */
+.clearfix::after {
+    content:'';
+    clear: both;
+    display: table;
+}
+
+/* images flexibles */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* ======================================= */
+
+/*  === VARIABLES === */
+
+:root{
+    --red :#c81d49;
+}
+
+/*  === GRILLE === */
+
+/*  === TEXTES & POLICES === */
+
+/*  === NAVIGATIONS === */
+
+/* suppression des elts de listes */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*  === BOUTONS & CALL TO ACTION === */
+
+/*  === COMPOSANTS (formulaires, produits) === */
+
+/*  === DIVERS === */
+
+/* ======================================= */
+
+/*  === BODY === */
+
+body{
+    background-color: #000;
+    color: white;
+    height: 100%;
+    width: 100%;
+
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+/*  === HEADER === */
+
+.container-logo{
+    padding-top: 60px;
+}
+
+.container-logo2{
+    height: 600px;
+    width: 300px;
+    background-image: url(../images/mechant.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: center;
+
+}
+
+.logo{
+    width: 50%;
+    margin: auto;
+}
+
+.devinez-title{
+    font-family: serif;
+    font-size: 1em;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--red);
+}
+
+.mechant{
+    width: 30%;
+    margin: auto;
+}
+
+
+/*  === MAIN === */
+
+#start{
+    display: flex;
+}
+
+
+.main-content{
+   display: flex;
+   flex-direction: column;
+
+}
+
+#setting-game{
+    align-self: center;
+}
+
+#error-message{
+    align-self: center;
+}
+
+
+.input{
+    height: 40px;
+    width: 200px;
+    border:none;
+    border-radius: 10px;
+    color: var(--red);
+    outline: none;
+    padding-left: 15px;
+    
+}
+
+.input::placeholder {
+    color: var(--red);
+    font-family: 'Offside', cursive;
+    font-size: .75em;
+}
+
+
+.input2{
+    background-color: #000;
+    height: 120px;
+    width: 100px;
+    border: none; 
+    color: white;
+    outline: none;
+    font-size: 4.5em;
+    text-align: center;
+    border-radius: 75px;
+    padding-right: 3px;
+    
+}
+
+.input2::placeholder {
+    color: white;
+    font-family: 'Offside', cursive;
+    font-size: .75em;
+    text-align: center;
+}
+
+.button{
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--red);
+    color: #fff;
+    font-family: 'Offside', cursive;
+    font-size: .75em;
+    cursor: pointer;
+
+}
+
+#suite{
+    display: none;
+    flex-direction: column;
+}
+
+.regle{
+    padding: 20px;
+    background-color: var(--red);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button2{
+    background-color: white;
+    font-family: 'Offside', cursive;
+    height: 40px;
+    width: 90px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    margin-top: 80px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.enter{
+    display: flex;
+    flex-direction: column;  
+    align-self: center;
+    justify-content: center;
+    width: 100px;
+    position: absolute;
+    top: 500px;
+
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+#indice{
+    text-align: center;
+}
+
+.gagne{
+    height: 100%;
+    width: 100%;
+    font-family: 'Offside', cursive;
+    font-size: 4em;
+    text-transform: uppercase;
+    background-image: url(../images/gagne.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    justify-content: flex-end;
+    padding-bottom: 10%;
+}
+
+.defaite{
+    height: 100%;
+    width: 100%;
+    font-family: 'Offside', cursive;
+    font-size: 4em;
+    text-transform: uppercase;
+    background-image: url(../images/perdu.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    justify-content: flex-end;
+    padding-bottom: 10%;
+}
+
+.recommence{
+    margin: auto 0;
+}
+
+.defaite > h1{
+    width: auto;
+    height: 200px;
+    align-self: center;
+    text-align: center;
+    margin-top: 10%;
+
+}
+
+.gagne > h1{
+    width: auto;
+    height: 200px;
+    align-self: center;
+    text-align: center;
+    margin-top: 10%;
+
+}
+
+.btn_relancer{
+    width: 300px;
+    height:100px;
+    font-size: 0.5em;
+    background-color: var(--red);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    box-shadow: 10px 5px 5px black;
+    border: none;
+    outline: none;
+    align-self: center;
+    cursor: pointer;
+}
+
+/*  === FOOTER === */
+
+/*  === MISE EN PAGE DIVERS === */
+
+/* ======================================= */
+
