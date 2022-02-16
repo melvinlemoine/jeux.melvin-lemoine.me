@@ -1,0 +1,3 @@
+[submodule "jeu-devine-le-nombre"]
+	path = jeu-devine-le-nombre
+	url = https://github.com/melvinlemoine/jeu-devine-le-nombre.git
